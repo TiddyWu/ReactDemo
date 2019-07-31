@@ -1,6 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import ShowLove from './ShowLove';
+import Button from '@material-ui/core/Button';
 
 export default class MyButton extends React.Component {
     constructor(props) {
@@ -18,9 +19,13 @@ export default class MyButton extends React.Component {
     render() {
         return (
             <div>
-                <button onClick = {this.setNewNumber}>再爱一次</button>
+                <Button variant="contained" color="primary" onClick = {this.setNewNumber} >
+                    再爱一次
+                </Button>
+
                 <ShowLove time = {this.state.data} />
             </div>
+
         );
     }
 }
